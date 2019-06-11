@@ -1,10 +1,10 @@
 /*  2019.0603.14:23
 modified from duncan
 load dependency
-"newbit": "file:../pxt-newbit"
+"swit": "file:../pxt-swit"
 */
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace newbit_显示类 {
+namespace swit_显示类 {
 
     let lhRGBLight: QbitRGBLight.LHQbitRGBLight;
     //% blockId="initRGBLight" block="initRGBLight before use"
@@ -12,11 +12,13 @@ namespace newbit_显示类 {
     export function initRGBLight() {
         if (!lhRGBLight) {
             lhRGBLight = QbitRGBLight.create(DigitalPin.P16, 4, QbitRGBPixelMode.RGB);
+			
+			
         }
         clearLight();
     }
 
-    //% blockId=newbit_SevenColorLED block="SevenColorLED|%uartData"
+    //% blockId=swit_SevenColorLED block="SevenColorLED|%uartData"
     //% weight=93
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
@@ -100,7 +102,7 @@ namespace newbit_显示类 {
 }
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace newbit_传感器类 {
+namespace swit_传感器类 {
 
     export enum enVoice {
         //% blockId="Voice" block="有声音"
@@ -382,7 +384,7 @@ namespace newbit_传感器类 {
         return val;
     }
 
-    //% blockId=newbit_initColorSensor block="initColorSensor|value %value"
+    //% blockId=swit_initColorSensor block="initColorSensor|value %value"
     //% weight=95
     //% blockGap=10
     //% color="#87CEEB"
@@ -396,7 +398,7 @@ namespace newbit_传感器类 {
     /*
  *  Color sensor to obtain color value.
  */
-    //% weight=84 blockId=newbit_checkCurrentColor block="checkCurrentColor|color %color" 
+    //% weight=84 blockId=swit_checkCurrentColor block="checkCurrentColor|color %color" 
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -455,7 +457,7 @@ namespace newbit_传感器类 {
         return (color == t);
     }
 
-    //% blockId=newbit_Voice_Sensor block="Voice_Sensor|value %value|声音"
+    //% blockId=swit_Voice_Sensor block="Voice_Sensor|value %value|声音"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -471,7 +473,7 @@ namespace newbit_传感器类 {
         }
 
     }
-    //% blockId=newbit_Incline_Sensor block="Incline_Sensor|%value|倾斜"
+    //% blockId=swit_Incline_Sensor block="Incline_Sensor|%value|倾斜"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -489,7 +491,7 @@ namespace newbit_传感器类 {
 
     }
 
-    //% blockId=newbit_Smog_Sensor block="Smog_Sensor|%value|烟雾"
+    //% blockId=swit_Smog_Sensor block="Smog_Sensor|%value|烟雾"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -505,7 +507,7 @@ namespace newbit_传感器类 {
         }
 
     }
-    //% blockId=newbit_Humidity_Sensor block="Humidity_Sensor|土壤湿度|%value"
+    //% blockId=swit_Humidity_Sensor block="Humidity_Sensor|土壤湿度|%value"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -524,7 +526,7 @@ namespace newbit_传感器类 {
 
 
 
-    //% blockId=newbit_Touch_Sensor block="Touch_Sensor|%value|触摸"
+    //% blockId=swit_Touch_Sensor block="Touch_Sensor|%value|触摸"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -540,7 +542,7 @@ namespace newbit_传感器类 {
         }
 
     }
-    //% blockId=newbit_Photosensitive_Sensor block="Photosensitive_Sensor|%value|光照"
+    //% blockId=swit_Photosensitive_Sensor block="Photosensitive_Sensor|%value|光照"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -557,7 +559,7 @@ namespace newbit_传感器类 {
 
     }
 
-    //% blockId=newbit_Flame_Sensor block="Flame_Sensor|%value|火焰"
+    //% blockId=swit_Flame_Sensor block="Flame_Sensor|%value|火焰"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -582,7 +584,7 @@ namespace newbit_传感器类 {
             control.waitMicros(13);
         }
     }
-    //% blockId=newbit_IR_Sensor block="IR_Sensor|%value|障碍物"
+    //% blockId=swit_IR_Sensor block="IR_Sensor|%value|障碍物"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -599,7 +601,7 @@ namespace newbit_传感器类 {
         }
     }
 
-    //% blockId=newbit_IR_Send block="IR_Send|pin %pin"
+    //% blockId=swit_IR_Send block="IR_Send|pin %pin"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -614,14 +616,14 @@ namespace newbit_传感器类 {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace newbit_音乐类 {
+namespace swit_音乐类 {
     export enum enBuzzer {
         //% blockId="NoBeep" block="不响"
         NoBeep = 0,
         //% blockId="Beep" block="响"
         Beep
     }
-    //% blockId=newbit_BluetoothMusic block="BluetoothMusic|%uartData"
+    //% blockId=swit_BluetoothMusic block="BluetoothMusic|%uartData"
     //% weight=92
     //% blockGap=10
     //% color="#D2691E"
@@ -656,7 +658,7 @@ namespace newbit_音乐类 {
         }
 
     }
-    //% blockId=newbit_Buzzer block="关闭蜂鸣器"
+    //% blockId=swit_Buzzer block="关闭蜂鸣器"
     //% weight=100
     //% blockGap=10 
     //% color="#D2691E"
@@ -675,9 +677,9 @@ namespace newbit_音乐类 {
 
 //% color="#0000CD" weight=21 icon="\uf185"
 
-namespace newbit_电机类 {
+namespace swit_电机类 {
 
-    //% blockId=newbit_Vibrator_Open block="Vibrator_Open"
+    //% blockId=swit_Vibrator_Open block="Vibrator_Open"
     //% weight=100
     //% blockGap=10
     //% color="#0000CD"
@@ -688,7 +690,7 @@ namespace newbit_电机类 {
         pins.digitalWritePin(DigitalPin.P12, 1);
 
     }
-    //% blockId=newbit_Vibrator_Close block="Vibrator_Close"
+    //% blockId=swit_Vibrator_Close block="Vibrator_Close"
     //% weight=100
     //% blockGap=10
     //% color="#0000CD"
@@ -700,7 +702,7 @@ namespace newbit_电机类 {
 }
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace newbit_小车类 {
+namespace swit_小车类 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
@@ -810,7 +812,7 @@ namespace newbit_小车类 {
         //% blockId="Car_SpinRight" block="原地右旋"
         Car_SpinRight = 7
     }
-    //% blockId=newbit_BluetoothCarControl block="BluetoothCarControl|%uartData"
+    //% blockId=swit_BluetoothCarControl block="BluetoothCarControl|%uartData"
     //% weight=92
     //% blockGap=10
     //% color="#006400"
@@ -832,7 +834,7 @@ namespace newbit_小车类 {
             CarCtrl(CarState.Car_Stop)
         }
     }
-    //% blockId=newbit_BluetoothServoControl block="BluetoothServoControl|%uartData"
+    //% blockId=swit_BluetoothServoControl block="BluetoothServoControl|%uartData"
     //% weight=92
     //% blockGap=10
     //% color="#006400"
@@ -877,7 +879,7 @@ namespace newbit_小车类 {
         }
 
     }
-    //% blockId=newbit_BluetoothModeSelect block="BluetoothModeSelect|%uartData"
+    //% blockId=swit_BluetoothModeSelect block="BluetoothModeSelect|%uartData"
     //% weight=92
     //% blockGap=10
     //% color="#006400"
@@ -1066,7 +1068,7 @@ namespace newbit_小车类 {
         //pins.digitalWritePin(DigitalPin.P16, 1);
         //pins.analogWritePin(AnalogPin.P1, 1023-speed);
     }
-    //% blockId=newbit_ultrasonic_car block="ultrasonic return distance(cm)"
+    //% blockId=swit_ultrasonic_car block="ultrasonic return distance(cm)"
     //% color="#006400"
     //% weight=98
     //% blockGap=10
@@ -1099,7 +1101,7 @@ namespace newbit_小车类 {
         //   let d = pins.pulseIn(DigitalPin.P15, PulseValue.High, 43200);
         //  return d / 58;
     }
-    //% blockId=newbit_Music_Car block="Music_Car|%index"
+    //% blockId=swit_Music_Car block="Music_Car|%index"
     //% weight=97
     //% blockGap=10
     //% color="#006400"
@@ -1128,7 +1130,7 @@ namespace newbit_小车类 {
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
     }
-    //% blockId=newbit_Servo_Car block="Servo_Car|num %num|value %value |速度 %speed"
+    //% blockId=swit_Servo_Car block="Servo_Car|num %num|value %value |速度 %speed"
     //% weight=96
     //% blockGap=10
     //% speed.min=1 speed.max=10
@@ -1172,7 +1174,7 @@ namespace newbit_小车类 {
 		   }   
         } 
     }
-    //% blockId=newbit_Avoid_Sensor block="Avoid_Sensor|value %value"
+    //% blockId=swit_Avoid_Sensor block="Avoid_Sensor|value %value"
     //% weight=95
     //% blockGap=10
     //% color="#006400"
@@ -1207,7 +1209,7 @@ namespace newbit_小车类 {
         //    pins.digitalWritePin(DigitalPin.P9, 1);
         return temp;
     }
-    //% blockId=newbit_Line_Sensor block="Line_Sensor|direct %direct|value %value"
+    //% blockId=swit_Line_Sensor block="Line_Sensor|direct %direct|value %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
@@ -1248,7 +1250,7 @@ namespace newbit_小车类 {
         }
         return temp;
     }
-    //% blockId=newbit_CarCtrl block="CarCtrl|%index"
+    //% blockId=swit_CarCtrl block="CarCtrl|%index"
     //% weight=93
     //% blockGap=10
     //% color="#006400"
@@ -1264,7 +1266,7 @@ namespace newbit_小车类 {
             case CarState.Car_SpinRight: Car_spinright(255); break;
         }
     }
-    //% blockId=newbit_CarCtrlSpeed block="CarCtrlSpeed|%index|speed %speed"
+    //% blockId=swit_CarCtrlSpeed block="CarCtrlSpeed|%index|speed %speed"
     //% weight=92
     //% blockGap=10
     //% speed.min=0 speed.max=255
@@ -1281,7 +1283,7 @@ namespace newbit_小车类 {
             case CarState.Car_SpinRight: Car_spinright(speed); break;
         }
     }
-    //% blockId=newbit_MotorRun block="MotorRun|%index0|%index1|speed%speed"
+    //% blockId=swit_MotorRun block="MotorRun|%index0|%index1|speed%speed"
     //% weight=93
     //% blockGap=10
     //% speed.min=0 speed.max=255
